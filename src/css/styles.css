@@ -5,10 +5,29 @@
 }
 #control-panel{
     display:flex;
+    flex-direction:column;
+}
+#instrument-selection{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom:10px;
+}
+#scale-type{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom:10px;
+}
+#key-selection{
+    display:flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-evenly;
     padding-bottom: 30px;
+}
+button{
+    width:100%;
 }
 #display-panel{
     display: flex;
