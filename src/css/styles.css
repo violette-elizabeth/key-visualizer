@@ -1,0 +1,33 @@
+#screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#control-panel{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+}
+#display-panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.string{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    
+}
+.note-active{
+    background-color: green;
+    width: 100%;
+    height: 100%;
+}
+.note{
+    background-color: none;
+    width: 100%;
+    height: 100%;
+}
