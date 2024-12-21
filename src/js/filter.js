@@ -5,9 +5,13 @@
 function Filter(numNotes, key, legend){
     outputArr = [];
     for (x = 0; x<=numNotes; x++) {
-        if (legend.includes((x+12-key) % 12)) {
-            outputArr.push(x);
+        //if (legend.includes((x+12-key) % 12)) {
+        for (y=0;y<legend.length;y++) {
+            if (((x+12-key)%12)==legend[y]){
+                outputArr.push(x);
+            }
         }
+
     }
     return outputArr;
 }

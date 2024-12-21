@@ -13,8 +13,12 @@ function initializeFretboard() {
 }
 
 function initializeColorboard() { //6 strings, 12 frets. value in each element is initialized to 0, and relevent elements will be turned to 1 when a key is selected
-    guitarColorboard = Array(6).fill().map(() => Array(13).fill(0));
-    
+    guitarColorboard = [[],[],[],[],[],[]];
+    for (m=0;m<6;m++) {
+        for (n=0;n<=12;n++) {
+            guitarColorboard[m].push(0);
+        }
+    }
     return guitarColorboard;
 }
 
