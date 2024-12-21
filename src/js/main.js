@@ -1,25 +1,25 @@
-const noteBoard = initializeFretboard();
-let displayBoard = initializeColorboard();
-let keyOptions = initializeKeySet();
-let legend = initializeLegends("major");
-let x=0;
+noteBoard = initializeFretboard();
+displayBoard = initializeColorboard();
+keyOptions = initializeKeySet();
+legend = initializeLegends("major");
+x=0;
 keyOptions.forEach(item =>{
-    let button = document.createElement('button');
+    button = document.createElement('button');
     button.id = "key"+x;
-    let panel = document.getElementById('control-panel');
+    panel = document.getElementById('control-panel');
     button.textContent = item;
     button.onclick = function(){update(noteBoard, displayBoard, legend, this)};
     panel.appendChild(button);
     x++;
 })
 for (i=0;i<displayBoard.length;i++) {
-    let string = document.createElement('div');
+    string = document.createElement('div');
     string.className = 'string';
     string.id = "string"+i;
-    let fretboard = document.getElementById('display-panel');
+    fretboard = document.getElementById('display-panel');
     fretboard.appendChild(string);
     for (j=0;j<displayBoard[0].length;j++) {
-        let note = document.createElement('div');
+        note = document.createElement('div');
         note.textContent = keyOptions[noteBoard[i][j]%12];
         if (displayBoard[i][j] == 1){
             note.className = 'note-active';
@@ -32,9 +32,9 @@ for (i=0;i<displayBoard.length;i++) {
 }
 
 function update(notes, display, code, button){
-    let key = button.id.slice(3);
-    let keyArr = Filter(36,key,code);
-    let y = 0;
+    key = button.id.slice(3);
+    keyArr = Filter(36,key,code);
+    y = 0;
     for (i=0;i<notes.length;i++){
         for (j=0;j<notes[0].length;j++) {
             y = 0;

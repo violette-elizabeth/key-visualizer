@@ -3,7 +3,7 @@
 //keyNotesArr = [0,2,4,5,7,9,11] for major key; notes that fit the major key with zero as base note; [0,2,3,5,7,8,10] for minor key
 //outputArr = [] output container
 function Filter(numNotes, key, legend){
-    let outputArr = [];
+    outputArr = [];
     for (x = 0; x<=numNotes; x++) {
         if (legend.includes((x+12-key) % 12)) {
             outputArr.push(x);
