@@ -49,7 +49,10 @@ function createDisplay(instrument, scaleType) {
         fretboard.appendChild(string);
         for (j=0;j<displayBoard[0].length;j++) {
             note = document.createElement('div');
-            note.textContent = keyOptions[noteBoard[i][j]%12];
+            noteText = document.createElement('span');
+            noteText.textContent = keyOptions[noteBoard[i][j]%12];
+            noteText.className = 'note-text';
+            note.appendChild(noteText);
             if (displayBoard[i][j] == 1){
                 note.className = 'note-active';
             }
